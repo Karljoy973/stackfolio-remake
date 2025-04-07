@@ -15,7 +15,7 @@ const props = withDefaults(defineProps<Props>(), {
     theme: 'solar'
 });
 
-let currentTheme = computed(() =>props.theme)
+const currentTheme = computed(() =>props.theme)
 //set state 
 </script>
 <style lang="css" scoped>

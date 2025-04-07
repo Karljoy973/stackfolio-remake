@@ -1,6 +1,6 @@
 <template >
     <div class="skills-list">
-        <skill-item v-for="(skill, index) in skills" :name="skill.name" :key="index" :skill_type="skill.skill_type"></skill-item>
+        <skill-item v-for="(skill, index) in props.skills" :name="skill.name" :key="index" :skill_type="skill.skill_type"></skill-item>
     </div>
 </template>
 <script setup lang="ts">
@@ -11,9 +11,9 @@ interface Props {
         skill_type: 'tech'|'soft'
     }[]>
 }
-const props = defineProps<Props>();
+const props: Props = defineProps<Props>();
 </script>
-<style lang="css">
+<style lang="css" scoped>
       .skills-list {
     display: flex;
     flex-wrap: wrap;
